@@ -1,0 +1,18 @@
+<div class="container" *ngIf="items.length > 0; else noOrders">
+    <header class="jumbotron">
+      <h3>
+        <strong>Shopping Cart</strong> 
+      </h3>
+    </header>
+    <div class="items-container">
+        <li *ngFor="let item of items">
+            {{ item.name }} - ${{ item.price }}
+        </li>
+        <mat-checkbox [(ngModel)]="isPaid" class="custom-checkbox">Paid</mat-checkbox>
+        <button class = "create-button" (click)="createOrder()">Create Order</button>
+    </div>
+  </div>
+
+  <ng-template #noOrders>
+    <p class="no-orders-message">Your shopping cart is empty</p>
+  </ng-template>

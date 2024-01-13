@@ -1,0 +1,22 @@
+a:visited {
+    color: #1e90ff; /* устанавливаем цвет по умолчанию для посещённых ссылок */
+  }
+  
+  a.nav-link {
+    text-decoration: underline;
+  }
+
+  #admin {
+    display: flex;
+    justify-content: center;
+    list-style: none;  /* Убираем маркеры списков */
+  }
+  
+  .nav-item {
+    margin: 0 10px;  /* Добавляем отступы между элементами списка */
+  }
+
+  .usersInfo {
+    display: flex;
+    flex-wrap: wrap;
+  }

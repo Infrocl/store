@@ -1,0 +1,16 @@
+<div id="admin">
+        <li class="nav-item">
+            <a href="/item/new" class="nav-link" routerLink="item/new">Create Item</a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/package/new" class="nav-link" routerLink="package/new">Create Package</a>
+        </li>
+</div>
+<div class="usersInfo">
+    <ul class="navbar-nav ml-auto" *ngIf="users.length > 0">
+        <li *ngFor="let user of users; let i = index">
+             <a  class="nav-link"  style="cursor: pointer" (click)="showUserInfo(i)">Id: {{user.id}}; Email: {{user.email}}</a>
+        </li>
+      </ul>
+</div>

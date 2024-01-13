@@ -1,0 +1,23 @@
+.card-container {
+    max-width: 400px; /* Устанавливаем максимальную ширину карточки */
+    margin: 0 auto; /* Центрируем карточку по горизонтали */
+    padding: 20px;
+    border: 1px solid #ccc; /* Добавляем рамку карточке */
+    border-radius: 5px; /* Закругляем углы карточки */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Добавляем тень */
+    background-color: #fff; /* Устанавливаем цвет фона карточки */
+  
+    display: flex; /* Используем flex-контейнер */
+    flex-direction: column; /* Располагаем элементы в столбик */
+    align-items: center; /* Центрируем по вертикали */
+  }
+  
+  /* Стили для формы */
+  .form-control {
+    width: 100%; /* Занимаем всю ширину родительского контейнера */
+    margin-bottom: 15px; /* Добавляем отступ между элементами формы */
+  }
+
+  .invalid-feedback {
+    color: red;
+  }

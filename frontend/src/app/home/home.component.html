@@ -1,0 +1,16 @@
+<section>
+    <form class="search-form" (ngSubmit)="searhItem()">
+      <input type="text" [(ngModel)]="itemName" name="itemName" placeholder="Items search" class="search-input">
+      <button class="search-button">Find</button>
+    </form>
+</section>
+
+<div class="products-list">
+    <div *ngFor="let item of items; let i = index" class="product-item">
+        <p>Id: {{item.id}}</p>
+        <p>Name: {{ item.name }}</p>
+        <p>Price: {{ item.price }}</p>
+        <button (click) = "addToCart(i)" *ngIf="isUser" class="search-button">Add to Cart</button>
+        <button (click) = "update(i)" *ngIf="isAdmin" class="search-button">Update</button>
+</div>
+</div>

@@ -1,0 +1,62 @@
+<div class="col-md-12">
+    <div class="card card-container">
+      <form
+        *ngIf="!isCreated && !isUpdated" 
+        name="form"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="form-group">
+          <label for="username">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            [(ngModel)]="form.name"
+            required
+            #name="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && name.errors }"
+          />
+          <div *ngIf="name.errors && f.submitted" class="invalid-feedback">
+            Item name is required!
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            name="password"
+            [(ngModel)]="form.price"
+            required
+            #price="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && price.errors }"
+          />
+          <div *ngIf="price.errors && f.submitted" class="invalid-feedback">
+                Price is required
+            </div>
+          </div>
+
+        <div class="form-group" *ngIf="toCreate">
+          <button (click)="f.form.valid && createItem()" class="btn btn-primary btn-block">
+            Create
+          </button>
+        </div>
+
+        <div class="form-group" *ngIf="!toCreate">
+          <button (click)="f.form.valid && updateItem()" class="btn btn-primary btn-block">
+            Update
+          </button>
+        </div>
+      </form>
+  
+      <div class="alert alert-success" *ngIf="isCreated">
+        Item is created!
+      </div>
+
+      <div class="alert alert-success" *ngIf="isUpdated">
+        Item is updated!
+      </div>
+    </div>
+  </div>
+  

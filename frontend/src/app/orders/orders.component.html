@@ -1,0 +1,29 @@
+<div class="container" *ngIf="dataLoaded && orders.length > 0; else noOrders">
+    <header class="jumbotron">
+      <h3>
+        <strong>My Orders</strong> 
+      </h3>
+    </header>
+    <div class="orders-container">
+    <div *ngFor="let order of orders ">
+        <div>
+          <strong>Order № {{ order.id }}</strong>
+          <p>Order Date: {{ order.orderDate }}</p>
+          <p>Paid: {{ order.paid }}</p>
+          <p>Items:</p>
+          <ul>
+            <li *ngFor="let item of order.items">
+              <p>Id: {{item.id}}</p>
+              <p>Name: {{ item.name }}</p>
+              <p>Price: {{ item.price }}</p>
+            </li>
+          </ul>
+          <p>Total Price: {{ order.totalPrice }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noOrders>
+    <p class="no-orders-message">You don't have any orders</p>
+  </ng-template>

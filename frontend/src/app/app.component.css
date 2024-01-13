@@ -1,0 +1,30 @@
+/* Устанавливаем горизонтальное расположение для родителя (navbar) */
+.navbar {
+  display: flex; 
+  justify-content: space-between; /* Равномерное распределение элементов по ширине */
+  align-items: center;
+}
+
+/* Устанавливаем горизонтальное расположение пунктов меню */
+.navbar-nav {
+  display: inline-flex;
+  list-style: none; /* Убираем маркеры списка, если таковые есть */
+}
+
+/* Принудительно устанавливаем отступ между пунктами меню */
+.nav-item {
+  margin-right: 5px;
+}
+.navbar-nav a:visited {
+  color: #1e90ff; /* устанавливаем цвет по умолчанию для посещённых ссылок */
+}
+
+a.nav-link {
+  text-decoration: underline;
+}
+
+body {
+  background-color: #f4f4f4; /* молочный фон */
+  color: #1e90ff; /* тёмно-синие буквы */
+  font-family: 'Be Vietnam Pro', sans-serif;
+}

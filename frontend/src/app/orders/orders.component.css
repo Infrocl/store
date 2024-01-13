@@ -1,0 +1,10 @@
+.orders-container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  grid-gap: 10px; /* Отступ между блоками */
+  }
+
+  .no-orders-message {
+    text-align: center; /* Выравнивание по центру */
+  }

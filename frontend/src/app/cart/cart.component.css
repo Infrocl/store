@@ -1,0 +1,22 @@
+.orders-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .no-orders-message {
+    text-align: center; /* Выравнивание по центру */
+  }
+
+  .create-button {
+    padding: 10px 16px;
+    background-color: #007bff; /* Цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+
+  .custom-checkbox .mat-checkbox-label {
+    color: #007bff; 
+  }

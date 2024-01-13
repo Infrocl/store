@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 1px;
+ 
+}
+
+:root {
+  --primary-color: #605DC8;
+  --secondary-color: #8B89E6;
+  --accent-color: #e8e7fa;
+  --shadow-color: #E8E8E8;
+}
+
+.btn-primary {
+  background: linear-gradient(to bottom, #007bff, #0056b3);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 30%;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to bottom, #0056b3, #003d6b);
+}
+
+
+body {
+  background-color: #f4f4f4; /* молочный фон */
+  color: #1e90ff; /* тёмно-синие буквы */
+  font-family: 'Be Vietnam Pro', sans-serif;
+  
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+ }
+
+ 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

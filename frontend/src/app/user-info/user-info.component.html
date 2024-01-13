@@ -1,0 +1,66 @@
+<div class="profile-container" *ngIf="dataLoaded">
+    <header class="jumbotron">
+      <h3>
+        <strong>{{ userName }}</strong> Profile
+      </h3>
+    </header>
+    <p>
+      <strong>Email:</strong>
+      {{ email }}
+    </p>
+    <p>
+      <strong>Date of Birth:</strong>
+      {{ birthDate }}
+    </p>
+    <p>
+      <strong>Registration Date:</strong>
+      {{ registrationDate }}
+ 
+    <p><strong>Orders:</strong></p>  
+  <div class="container">
+    <div *ngFor="let order of orders ">
+        <div>
+          <strong>Order № {{ order.id }}</strong>
+          <p>Order Date: {{ order.orderDate }}</p>
+          <p>Paid: {{ order.paid }}</p>
+          <p>Items:</p>
+          <ul>
+            <li *ngFor="let item of order.items">
+              <p>Name: {{ item.name }}</p>
+              <p>Price: {{ item.price }}</p>
+            </li>
+          </ul>
+          <p>Total Price: {{ order.totalPrice }}</p>
+        </div>
+      </div>
+    </div>
+    <p><strong>Packages:</strong></p>
+    <div class="container">
+        <div *ngFor="let package of packages ">
+            <div>
+              <strong>Package № {{ package.id }}</strong>
+              <p>Shipment Date: {{ package.shipmentDate }}</p>
+              <p>Delivery Date: {{ package.deliveryDate }}</p>
+              <p>Orders:</p>
+              <div *ngFor="let order of package.orders ">
+                <div>
+                  <strong>Order № {{ order.id }}</strong>
+                  <p>Order Date: {{ order.orderDate }}</p>
+                  <p>Paid: {{ order.paid }}</p>
+                  <p>Items:</p>
+                  <ul>
+                    <li *ngFor="let item of order.items">
+                        <p>Id: {{item.id}}</p>
+                      <p>Name: {{ item.name }}</p>
+                      <p>Price: {{ item.price }}</p>
+                    </li>
+                  </ul>
+                  <p>Total Price: {{ order.totalPrice }}</p>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+
+
+</div>
